@@ -1,0 +1,57 @@
+ul{
+    position: relative;
+    left: 35%;
+}
+
+
+
+.navbar-toggler{
+    border: none;
+}
+
+.navbar{
+    background-color: black;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: #1DB954;
+}
+
+
+.login{
+    color: rgb(212, 212, 212);
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .navbar{
+        height: 85px;
+    }
+
+    .navbar-brand img{
+        width: 140px;
+    }
+
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+
+}

@@ -1,0 +1,172 @@
+h3{
+    font-size: 2em;
+    letter-spacing: -.07em;
+    font-weight: bolder;
+}
+
+h4{
+    font-size: 10.2px;
+    line-height: 15px;
+    text-align: center;
+}
+
+form{
+    text-align: left;
+    margin: auto;
+    width: 410px;
+}
+
+
+label{
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+label[for='mensagens'], label[for='dados'], label[for='termos']{
+    font-size: 12px;
+    
+}
+
+input, select{
+    width: 390px;
+    border: 1px solid gray;
+    height: 50px;
+}
+
+input.day{
+    width: 70px;
+}
+
+select.month{
+    width: 150px;
+}
+
+select:invalid{
+    color: rgb(82, 82, 82);
+}
+
+option{
+    position: relative;
+    top: 10px;
+}
+
+input.year{
+    width: 100px
+}
+
+input[type='text'].ng-touched.ng-invalid, input[type='password'].ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+
+
+a small{
+    color: #198840;;
+}
+
+
+.signin{
+    
+    width: 60%;
+    text-align: center;
+
+}
+
+
+.costumize-button1, .costumize-button2{
+    line-height: 35px;
+    border-radius: 50px;
+    width: 350px;
+}
+
+.costumize-button1{
+    background-color: #405A93;
+}
+
+.costumize-button2{
+    border: 2px solid gray;
+
+}
+
+.costumize-button3{
+    line-height: 60px;
+    border-radius: 50px;
+    width: 250px;
+    background-color: #1ed760;
+    border: none;
+    
+
+}
+
+.costumize-button1:hover, .costumize-button2:hover{
+    line-height: 38px;
+    border-radius: 50px;
+    width: 355px;
+    font-size: 17px;
+}
+
+.costumize-button2:hover{
+    color: gray;
+    background-color: white;
+}
+
+.form-control:hover{
+    border: 1px solid black;
+    box-shadow: none;
+}
+
+.form-control:focus{
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: none;
+}
+
+.eyeicon{
+    position: relative;
+    bottom: 35px;
+    left: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.birthday{
+    width: 410px;
+}
+
+.invalid{
+    border: 1px solid red;
+}
+
+
+.form-check{
+    margin: 0;
+    padding: 0;
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+.form-check-input{
+    width: 15px;
+    height: 15px;
+
+}
+
+.form-check-input:checked{
+    box-shadow: none;
+    border: none;
+    width: 15px;
+    height: 15px;
+    background-color: #198840;
+}
+
+.link{
+    color: #1DB954;
+}
+
+.subtitle{
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+.submitted input.ng-invalid[type='text'], .submitted input.ng-invalid[type='password'], .submitted select.ng-invalid {
+    border-color: red;
+}

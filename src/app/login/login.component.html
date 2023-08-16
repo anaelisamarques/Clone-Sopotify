@@ -1,0 +1,53 @@
+<html>
+<nav class="navbar py-0 ">
+    <img class= 'py-4 mx-5 py-0' src="https://imagensfree.com.br/wp-content/uploads/2021/11/Spotify_Logo_RGB_White.png" width="120px">
+</nav>
+<div class="principal container-fluid container-md d-flex flex-column align-items-md-center">
+    <img class= 'logo mt-5 mx-4 my-4' src="https://imagensfree.com.br/wp-content/uploads/2021/11/Spotify_Logo_RGB_White.png" width="80px">
+    <h1 class="text-light mt-md-5 mx-4 mb-5">
+        <strong>Entrar no Spotify</strong>
+    </h1> 
+    <a class="btn google btn-outline-secondary costumize-button1 mx-4 mb-2">
+        <span><img src='https://accounts.scdn.co/sso/images/new-google-icon.72fd940a229bc94cf9484a3320b3dccb.svg'></span><strong>Inscreva-se com Google</strong>
+    </a>
+    <a class="btn face btn-outline-secondary costumize-button1 mx-4 mb-2">
+        <span><img src='https://accounts.scdn.co/sso/images/new-facebook-icon.eae8e1b6256f7ccf01cf81913254e70b.svg'></span><strong>Continue com o Facebook</strong>
+    </a>
+    <a class="btn apple face btn-outline-secondary costumize-button1 mx-4 mb-2">
+        <span><img src='https://accounts.scdn.co/sso/images/new-apple-icon.e356139ea90852da2e60f1ff738f3cbb.svg'></span><strong>Continue com a Apple</strong>
+    </a>
+    <a class="btn phone btn-outline-secondary costumize-button1 mx-4 mb-">
+        <strong>Continue com um número de telefone</strong>
+    </a>
+    <hr class="text-secondary">
+ 
+    <form [formGroup]=loginForm class="mx-4 my-md-3 form " (submit)="login()">
+        <div class="form-group mb-3">
+            <label class="text-light mb-2" for="emailAdress">E-mail ou nome de usuário</label>
+            <input class="form-control" type="text" id="emailAdress" formControlName="emailAdress" placeholder="E-mail ou nome de usuário">
+            <small *ngIf="(loginForm.get('emailAdress')?.touched || logined) && loginForm.get('emailAdress')?.errors;" class="text-danger align-self-start mb-1"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Insira seu nome de usuário ou endereço de e-mail do Spotify.</span></small>
+        </div>
+
+        <div class="form-group">
+            <label class="text-light mb-2" for="password">Senha</label>
+            <input class="form-control" [type]="view?'text':'password'" id="password" formControlName="password" placeholder="Senha">   
+            <small *ngIf="(loginForm.get('password')?.touched || logined) && loginForm.get('password')?.errors;" class="text-danger align-self-start mb-1"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Por favor, insira sua senha.</span></small>
+        </div> 
+            <span class="liga-desliga mt-3">
+                <input type="checkbox" id="remember">
+                <label for="remember"></label>
+                <label class="text-light" for="remember">Lembrar de mim</label>
+            </span>
+
+        <button type="submit" class="btn login costumize-button1"><strong class="text-dark">Entrar</strong></button>
+    
+    </form>
+
+    <hr class="text-secondary">
+    
+    
+    
+</div>
+</html>
+
+

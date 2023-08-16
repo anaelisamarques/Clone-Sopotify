@@ -1,0 +1,240 @@
+h1, h3{
+    font-weight: 700;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.7em;
+    text-align: center;
+}
+
+h4{
+    font-size: 1.3em;
+}
+
+h6{
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+small{
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+footer{
+    background-color: black;
+    height: 1000px;
+}
+/*classes*/
+.home{
+    height: 400px;
+}
+
+/*botões*/
+.costumize-button1, .costumize-button2{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100%;
+    color: white;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.costumize-button1{
+    background-color: rgb(24, 24, 24);
+}
+
+.costumize-button2{
+    border: .2em solid white;
+}
+
+.costumize-button1:hover, .costumize-button2:hover{
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    line-height: 43px;
+}
+
+.costumize-button2:hover{
+    background-color: transparent;
+    border: .15em solid white;
+}
+
+.planos{
+    background-color: rgb(243, 243, 243);
+}
+
+.bandeiras{
+    width: 300px;
+}
+
+.more_bandeiras{
+    margin-top: 10px;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    right: 170px;
+    z-index: 1;
+}
+
+.card{
+    border-radius: 13px;
+    width: 450px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(197, 197, 197);
+}
+
+.costumize-button3{
+    font-size: .8em;
+    line-height: 10px;
+    border-radius: 5px;
+}
+
+.planos-details{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+.card-content h2, .card-content p{
+    margin: 0;
+}
+
+h6{
+    text-align: center;
+}
+
+
+
+.card .costumize-button1{
+    height: 53px;
+}
+
+
+.nav-link{
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.titulo{
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgb(129, 129, 129);
+}
+
+.nav-link:hover{
+    color: #1DB954;
+    font-size: 1em;
+    font-weight: 400;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.position_redes{
+    margin-top: 200px;
+}
+.redes{
+    border-radius: 20%;
+    
+}
+
+.circle_redes{
+    
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(31, 31, 31);
+}
+
+a.redes:hover{
+    border-radius: 20%;
+    background-color: #1DB954;
+    
+}
+
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    h3{
+        font-size: 40px;
+    }
+
+    p{
+        font-size: 23px;
+    }
+
+    header .costumize-button1, header .costumize-button2{
+        width: 200px;
+        height: 55%;
+        margin-right: 15px;
+    }
+
+    .home{
+        height: 320px;
+    }
+
+    
+    
+    .circles{
+        width: 90px;
+    }
+
+    footer{
+        height: 700px;
+    }
+    
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .circles{
+        width: 105px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .circles{
+        width: 145px;
+    }
+    .subtitle{
+        text-align: center;
+    }
+
+    .card{
+        height: 900px;
+    }
+
+    .card .costumize-button1{
+        height: 50px;
+    }
+
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+
+}

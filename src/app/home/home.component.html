@@ -1,0 +1,458 @@
+<app-menu></app-menu>
+<header class="bg-primary">
+    <div class="container-md d-flex flex-column align-items-start align-items-md-center align-items-lg-start align-itens-xl-start home">
+        <h3 class= "mx-1 my-5 mb-md-4 text-light mb-4">
+         Aproveite 1 mês grátis de Premium
+        </h3>
+        <p class="text-light mx-1 mb-5">
+            Depois, pague somente R$ 21,90/mês. Cancele quando quiser.
+        </p>
+        <div class="container-md d-flex flex-column flex-md-row align-items-md-start align-items-lg-start p-0 m-0">
+            <a routerLink="/login" class="btn mt-3 costumize-button1 col-12">
+                COMECE AGORA
+            </a>
+            <a href="#planos" class="btn btn-outline-light mt-3 mb-4 costumize-button2">
+                VER PLANOS
+            </a>
+        </div>
+            
+            
+        <small><a url="#" class="link-light">Sujeito a Termos e Condições.</a><span class="text-light"> O mês grátis não está disponível para usuários que já experimentaram o Premium</span></small>
+    </div>
+</header>
+
+<h3 class="p-4 mt-2 mb-4 my-md-5">
+    Por que ser Premium?
+</h3>
+
+<section class="container-fluid d-flex flex-column align-items-md-center align-items-lg-center premium">  
+    <div class="row container">
+        <div class="container d-flex flex-column flex-xl-row col-md-6 p-0">
+            <div class="container d-flex flex-xl-column align-items-lg-center">
+                <div>
+                    <img src="https://i.scdn.co/image/ab671c3d0000f43009302fbaf6259b4c117c704f" width="110px" class="px-0 mb-5 mb-xl-2 circles">
+                </div>
+                <div class="px-3 py-2">
+                    <h4 class="mb-3 mb-xl-2 subtitle">
+                        <strong>Modo offline.</strong>
+                    </h4>
+                    <h6>
+                        Ouça música onde estiver.
+                    </h6>
+                </div>
+            </div>
+    
+                <div class="container d-flex flex-xl-column align-items-lg-center">
+                    <div>
+                        <img src="https://i.scdn.co/image/ab671c3d0000f43098292b95d24a697c20df5137" width="110px" class="mb-5 mb-xl-2 circles">
+                    </div>
+                        <div class="px-3 py-2">
+                        <h4 class="mb-3 mb-xl-2 subtitle">
+                            <strong>Ouça músicas sem anúncios.</strong>
+                        </h4>
+                        <h6>
+                            Curta música sem anúncios.
+                        </h6>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="container d-flex flex-column flex-xl-row col-md-6 p-0">
+            
+            <div class="container d-flex flex-xl-column align-items-lg-center" >
+                <div>
+                    <img src="https://i.scdn.co/image/ab671c3d0000f4306998d3ffd58aad6da6afdf67" width="110px" class="mb-5 mb-xl-2 circles">
+                </div>
+                <div class="px-3 py-2">
+                    <h4 class="mb-3 mb-xl-2 subtitle">
+                        <strong>Ouça na ordem que quiser</strong>
+                    </h4>
+                    <h6 class="subtitle">
+                        Qualquer música em qualquer ordem.
+                    </h6>
+                </div>
+            </div>
+    
+            <div class="container d-flex flex-xl-column align-items-lg-center">
+                <div>
+                    <img src="https://content-tooling.spotifycdn.com/images/4a4fc24a-69b3-476b-b6d9-e7597cda526e_enhance_icon_(1).svg" width="110px"  class="mb-5 mb-xl-2 circles">
+                </div>
+                <div class="px-3 py-2">
+                    <h4 class="mb-3 mb-xl-2 subtitle">
+                        <strong>Qualidade de som superior</strong>
+                    </h4>
+                    <h6 class="subtitle">
+                        Sinta o som.
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="planos" class="container-fluid d-flex flex-column align-items-center planos py-4">
+    
+        <h1 class="pt-5">
+            Escolha seu plano Premium
+        </h1 >
+        <h6>
+            Ouça sem limites no seu celular, alto-falante e em outros dispositivos.
+        </h6>
+        <div class="container d-flex justify-content-between mb-5 bandeiras">
+            <span><img class="mx-1" src="https://content-tooling.spotifycdn.com/images/52f004ea-a49a-420b-8dca-14f5304ff4bf_visa.svg"></span>
+            <span><img src="https://content-tooling.spotifycdn.com/images/3a865441-c6d4-4f92-a4be-6c96c0e96d1f_mastercard.svg"></span>
+            <span><img src="https://content-tooling.spotifycdn.com/images/d4dd3e5b-f7d9-4cd0-80f1-b65f19c5e55c_amex.svg"></span>
+            <span><img src="https://content-tooling.spotifycdn.com/images/0a5cdc06-7024-4d04-999f-18e8b225b581_elo.svg" width="28px"></span>
+            <span><img src="https://content-tooling.spotifycdn.com/images/46c5bd7a-bdb3-43a8-916d-889887b02d80_hiper.svg" width="28px"></span>
+            <span><a class="link-dark" (mouseenter)="mais_bandeiras()" (mouseleave)="menos_bandeiras()">+ outros 11</a></span>
+        </div>
+        <div *ngIf = "more_bandeiras" class="more_bandeiras">
+            <div>
+                <span><img src="https://content-tooling.spotifycdn.com/images/52f004ea-a49a-420b-8dca-14f5304ff4bf_visa.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/3a865441-c6d4-4f92-a4be-6c96c0e96d1f_mastercard.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/d4dd3e5b-f7d9-4cd0-80f1-b65f19c5e55c_amex.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/d4dd3e5b-f7d9-4cd0-80f1-b65f19c5e55c_amex.svg"></span>
+            </div>
+            <div>
+                <span><img src="https://content-tooling.spotifycdn.com/images/52f004ea-a49a-420b-8dca-14f5304ff4bf_visa.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/3a865441-c6d4-4f92-a4be-6c96c0e96d1f_mastercard.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/d4dd3e5b-f7d9-4cd0-80f1-b65f19c5e55c_amex.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/d4dd3e5b-f7d9-4cd0-80f1-b65f19c5e55c_amex.svg"></span>
+            </div>
+            <div>
+                <span><img src="https://content-tooling.spotifycdn.com/images/52f004ea-a49a-420b-8dca-14f5304ff4bf_visa.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/3a865441-c6d4-4f92-a4be-6c96c0e96d1f_mastercard.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/d4dd3e5b-f7d9-4cd0-80f1-b65f19c5e55c_amex.svg"></span>
+                <span><img src="https://content-tooling.spotifycdn.com/images/d4dd3e5b-f7d9-4cd0-80f1-b65f19c5e55c_amex.svg"></span>
+            </div>
+            
+        </div>
+    
+    
+        <div class="container d-flex flex-column flex-xl-row align-items-xl-start align-items-center">
+                <!--Card 1-->
+            <div class="card mx-2 p-3 mb-3">
+                <div class="card-content container d-flex flex-column align-items-start ">
+                    <div class="my-2">
+                        <span class="btn btn-primary mx-1 costumize-button3"><strong>1 mês grátis ao assinar</strong></span>
+                        <span class="btn btn-outline-primary costumize-button3"><strong>Pagamento único disponível</strong></span>
+                    </div>   
+                <h2 class="mx-1 mt-2 mb-1">
+                    Individual
+                </h2>
+                <p class="lead mx-1 planos-details">
+                    R$ 21,90/mês após o período da oferta<br>
+                    1 conta
+                </p>
+                <hr>
+            
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Ouça músicas sem anúncios
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Ouça em qualquer lugar — até quando estiver offline
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Ouça músicas na ordem que quiser
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Faça um plano pré-pago ou uma assinatura
+                    </div>
+                </div>
+                    <a class="btn align-self-end mt-3 costumize-button1">
+                        COMECE AGORA
+                    </a>
+                    <small><a url="#" class="link-secondary">Sujeito a Termos e Condições.</a><span class="text-secondary"> O mês grátis não está disponível para usuários que já experimentaram o Premium</span></small>  
+            </div>
+            </div>
+        
+            <!--Card 2-->
+            <div class="card d-flex flex-column align-items-start mb-3  mx-2">
+                <div class="card-content p-3">
+                    <div class="my-2">
+                        <span class="btn btn-primary mx-1 costumize-button3"><strong>1 mês grátis ao assinar</strong></span>
+                        <span class="btn btn-outline-primary costumize-button3"><strong>Pagamento único disponível</strong></span>
+                    </div>   
+                <h2 class="mx-1 mt-2 mb-1">
+                    Duo
+                </h2>
+                <p class="lead mx-1 planos-details">
+                    R$ 27,90/mês após o período da oferta<br>
+                    2 contas
+                </p>
+                <hr class="line mb-4">
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        2 contas Premium para pessoas que moram juntas
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Música sem anúncios, no modo offline e na ordem que você quiser
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Faça um plano pré-pago ou uma assinatura
+                    </div>
+                </div>
+                <div>
+                    <a class="btn mt-3 costumize-button1">
+                        COMECE AGORA
+                    </a>
+                    <small><a url="#" class="link-secondary">Sujeito a Termos e Condições.</a><span class="text-secondary"> O mês grátis não está disponível para usuários que já experimentaram o Premium</span></small>
+                </div>
+              </div>    
+            </div>
+        
+            <!--Card 3-->
+            <div class="card d-flex flex-column align-items-start mb-3  mx-2">
+                <div class="card-content p-3">
+                    <div class="my-2">
+                        <span class="btn btn-primary mx-1 costumize-button3"><strong>1 mês grátis ao assinar</strong></span>
+                        <span class="btn btn-outline-primary costumize-button3"><strong>Pagamento único disponível</strong></span>
+                    </div>   
+                <h2 class="mx-1 mt-2 mb-1">
+                    Família
+                </h2>
+                <p class="lead mx-1 planos-details">
+                    R$ 34,90/mês após o período da oferta<br>
+                    Até 6 contas
+                </p>
+                <hr class="line mb-4">
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        6 contas Premium para familiares que moram no mesmo endereço
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Bloqueie músicas com conteúdo explícito
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Música sem anúncios, no modo offline e na ordem que você quiser
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Música sem anúncios, no modo offline e na ordem que você quiser
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Spotify Kids: um app separado, feito especialmente para crianças
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Faça um plano pré-pago ou uma assinatura
+                    </div>
+                </div>
+                
+                <a class="btn mt-3 align-self-center costumize-button1">
+                    COMECE AGORA
+                </a>
+                <small><a url="#" class="link-secondary">Sujeito a Termos e Condições.</a><span class="text-secondary"> O mês grátis não está disponível para usuários que já experimentaram o Premium</span></small>
+              </div>    
+            </div>
+        
+            <!--Card 4-->
+            <div class="card d-flex flex-column align-items-start mb-3  mx-2">
+                <div class="card-content p-3">
+                    <div class="my-2">
+                        <span class="btn btn-primary mx-1 costumize-button3"><strong>1 mês grátis ao assinar</strong></span>
+                        <span class="btn btn-outline-primary costumize-button3"><strong>Pagamento único disponível</strong></span>
+                    </div>   
+                <h2 class="mx-1 mt-2 mb-1">
+                    Universitário
+                </h2>
+                <p class="lead mx-1 planos-details">
+                    R$ 11,90/mês após o período da oferta<br>
+                    1 conta
+                </p>
+                <hr class="line mb-4">
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Desconto especial para estudantes universitários elegíveis
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Ouça músicas sem anúncios
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Ouça em qualquer lugar — até quando estiver offline
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-1 mx-1">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADNzc3V1dWbm5vS0tL19fXW1taenp47OzulpaU3NzcqKirb29ve3t739/ddXV0vLy9UVFTAwMDm5uaMjIxjY2NAQEC4uLhMJvATAAAD50lEQVR4nO2c23biMAxF67YUGErvc/n/L51htFIghCRyrCtnv5d4Lx1ZDgm9uwMAAAAAAAAAAAAAAAAAAACAyav1AoTZf5Ttp/UiJFmVAz+slyEHCSZWvC8lt+JRMKniqpTcivel5FbsC6ZTvBRMprgaEEylOFTBVIrXBNMoDkc0keKYYArF6xFNojglGF7xYVIwuOJ0BYMrzhMMrDi+iyZQnC9Yyr31YmuYG9H/7KxXWwFLsBTr5fLhRPQfb9brZcOsYPmyXjAXruCD9YK5cAVX1gvmMueodsraesFcuBVMLxguoswxEW+TSS+IMdEjfQ+m30XTC4aLaPpNBj14a4LhejB9RHFUuzXBcD2IO/pbEwwX0fSbDMZED/SgN3BU65G+B9MLhutBHNVuTTBcRNV20aefb5uWC5+LmuD68Nfv+j8FUxsTe/r73VPL1c9ArQdfuk/Y6iqqHdX2x89QraLamFiffsqzXi+qRXR//jlqQdXvwW9FnSpyj2rLxsQ5zxpVtOnBjp18Fe0iSoj3otpJZn/tE4WrqHtUG0Z0aGgf1YYRHP3WPdghNjTU7uhHK3jgXaaKtmOipyhRRauj2jACQ0Ntk5nowW/F1lX0MCbOaXyAU+vBr/nXaDo09L5V+8W4SsNeVHz4wrpOsypqPnzZsq7U6ACn+sXvJ+9aTYKq/M32I1NxeRXV7ug7NrzrLT7AGTx84Souq6LJwxduUJdU0egRNlNxwV2/2TN6ZlCrD3CGz+i5VaxTNH0AqtGLxu/JyA8N89dIuL3I3W4cPKOXDaoDQdkDnPpRbRi5oeHmPRmp7cZFRAmZXnT1tqHE6HclKNGL5nOwT+sqOurBSsWJXnT5OmXLHdVdRKsURw5wDiNKtAqqW8FWd/3OxsQ5LYaG0x7sYFZxYLtxHNEqxYtedB3RKsXe6A8guKwX3UeUqK9iEMH6XnRyRz+HugOcmzt6KcUwESX4QQ2xiy5Q/M18qmwvyA5qPEF2FVk4+fWZnKKb3w9KBdVFRAkZRScRJSSC6kpQQtFRRInWQXWzyRxpq+gsokTLoLqLKNFO0algu6C6FWxVRZc92NFC0eEuesryoDqOKLFU0XVEiWVBDSC4TNF9RIn6oAYRrK9iiIgSdYphKnigRjGUYE0vBooowa1iOEGuYrCIEpyghhTkKAaMKDE3qGEF5yoGjSgxJ6ihBedUMXBEiSnF4BU8MB7UBILjiuEjSlwPahLB64opIkoMBzWR4LBimogSl0FNJnipmCqixCZ3BQ88Zhc8VUwYUWKTXbBTTBpR4s+ufLxYL0IY/X8EDgAAAAAAAAAAAAAAAAAAAFzwFxaEMjRhGwM6AAAAAElFTkSuQmCC" width="20px">
+                    </div>
+                    <div class="col lead mx-1 planos-details align-baseline">
+                        Ouça músicas na ordem que quiser
+                    </div>
+                </div>
+                <a class="btn mt-3 align-self-center costumize-button1">
+                    COMECE AGORA
+                </a>
+                <small><span class="text-secondary">Oferta disponível somente para estudantes de instituições de ensino superior credenciadas. O mês grátis não está disponível para usuários que já experimentaram o Premium. <a url="#" class="link-secondary">Sujeito a Termos e Condições</a> da oferta do Spotify de desconto para universitários.</span></small>
+              </div>    
+            </div>
+        
+        
+    </div>
+    
+</section>
+
+<footer>
+    <div class="container">
+        <img class="p-4 pt-5" src="https://imagensfree.com.br/wp-content/uploads/2021/11/Spotify_Logo_RGB_White.png" width="140px">
+    </div>
+    
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start align-itens-xl-start my-2">
+        <nav class="navbar mx-4">
+            <ul class="navbar-nav">
+                <li class="nav-item titulo">
+                    EMPRESA
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0">
+                        Sobre
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-3">
+                        Empregos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-0">
+                    For the Record
+                    </a>
+                </li>
+            </ul>
+        </nav> 
+
+        <nav class="navbar mx-4 my-5 my-md-0">
+            <ul class="navbar-nav">
+                <li class="nav-item titulo">
+                    COMUNIDADES
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0">
+                        Para Artistas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0">
+                        Desenvolvedores
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0">
+                        Publicidade
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0">
+                        Investidores
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0">
+                        Fornecedores
+                    </a>
+                </li>
+            </ul>
+        </nav> 
+
+
+
+        <nav class="navbar mx-4">
+            <ul class="navbar-nav">
+                <li class="nav-item titulo">
+                    LINKS ÚTEIS
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0">
+                        Suporte
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-3">
+                        Player da Web
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-0">
+                        Aplicativo móvel grátis
+                    </a>
+                </li>
+            </ul>
+        </nav> 
+        
+    </div>
+</footer>
+
+
+
+
+

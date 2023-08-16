@@ -1,0 +1,150 @@
+<div class="pb-5">
+<div class="container d-flex flex-column align-items-center signin">
+    <img class="mt-5 mb-5" src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png.png" width="87">
+    <h3>
+        Inscreva-se grátis e comece a curtir.
+    </h3>
+    <a class="btn mt-3 costumize-button1 text-light">
+        <strong>Inscrever-se com o Facebook</strong>
+    </a>
+    <a class="btn btn-outline-secondary mt-3 mb-4 costumize-button2">
+        <strong>Inscreva-se com Google</strong>
+    </a>
+    <p class="text-s">ou</p>
+</div>
+
+<form [formGroup]="signinForm" (ngSubmit)="signin()" class="container d-flex flex-column align-items-center" [ngClass]="{'submitted' : submitted}">
+    <div class="form-group mb-4">
+        <label class="mb-2 subtitle"  for="emailAdress">Qual é o seu e-mail?</label>
+        <input class="form-control" type="text" id="emailAdress" placeholder="Insira seu e-mail." formControlName="emailAdress">
+        <div *ngIf="signinForm.get('emailAdress')?.touched || submitted">
+            <small class="text-danger" *ngIf="signinForm.get('emailAdress')?.hasError('required')"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Você deve inserir seu e-mail.</span></small>
+            <small class="text-danger" *ngIf="signinForm.get('emailAdress')?.hasError('email')"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Esse e-mail é inválido. O formato correto é assim: exemplo@email.com</span></small>
+        </div>
+        <a class="link"><small>Usar número de telefone</small></a>
+    </div>
+
+    <div class="form-group mb-4">
+        <label class="mb-2 subtitle"  for="password">Crie uma senha</label>
+        <input class="form-control" [type]="view?'text':'password'" id="password" placeholder="Crie uma senha." formControlName="password">
+        <span class="eyeicon" (click)="changeType()"><fa-icon [icon]="eye"></fa-icon></span>
+        <div *ngIf="signinForm.get('password')?.touched || submitted">
+            <small class="text-danger" *ngIf="signinForm.get('password')?.hasError('required')"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Você deve inserir uma senha.</span></small>
+            <small class="text-danger" *ngIf="signinForm.get('password')?.hasError('minlength')"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Sua senha é muito curta.</span></small>
+        </div>
+    </div>
+
+    <div class="form-group mb-4">
+        <label class="subtitle" for="name">Como podemos chamar você?</label>
+        <input class="form-control" type="text" id="name" placehoder="Insira um nome de perfil" formControlName='name'>
+        <small *ngIf="(signinForm.get('name')?.touched || submitted) && signinForm.get('name')?.errors; else alertaNome" class="text-danger"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Insira um nome para o seu perfil.</span></small>
+        <ng-template #alertaNome><small>Isso aparece no seu perfil.</small></ng-template>
+    </div>
+
+    
+    <div class="subtitle align-self-start">Qual a sua data de nascimento?</div>
+    <div class="form-group birthday container d-flex mx-0 justify-content-between">
+        
+        <div>
+            <label for="day">Dia</label>
+            <input type="text" id="day" class="form-control day" maxlength="2"  placeholder="DD" formControlName="day">
+        </div>
+        <div>
+            <label for="month">Mês</label>
+            <select id="month" class="form-control month" formControlName="month" [ngClass]="{'invalid':signinForm.controls['month'].touched && signinForm.get('month')?.value === ''}" required>
+                <option value="" disabled selected>Mês</option>
+                <option value="January">Janeiro</option>
+                <option value="February">Fevereiro</option>
+                <option value="March">Março</option>
+                <option value="April">Abril</option>
+                <option value="May">Maio</option>
+                <option value="June">Junho</option>
+                <option value="July">Julho</option>
+                <option value="Agust">Agosto</option>
+                <option value="September">Setembro</option>
+                <option value="October">Outubro</option>
+                <option value="November">Novembro</option>
+                <option value="December">Dezembro</option>
+            </select>
+
+        </div>
+        <div>
+            <label for="year">Ano</label>
+            <input type="text" id="year" class="form-control year" placeholder="AAAA" formControlName="year">
+        </div>
+    </div>
+    <small *ngIf="(signinForm.get('day')?.touched || submitted) && signinForm.get('day')?.errors;" class="text-danger align-self-start mb-1"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Insira um dia válido para o mês.</span></small>
+    <small *ngIf="(signinForm.get('month')?.touched || submitted) && signinForm.get('month')?.value === ''" class="text-danger align-self-start mb-1"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Selecione o mês de nascimento.</span></small>
+    <small *ngIf="(signinForm.get('year')?.touched || submitted) && signinForm.get('year')?.errors;" class="text-danger align-self-start mb-0"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Insira um ano válido.</span></small>
+
+<div class="subtitle align-self-start mt-4 mb-1">Qual é o seu gênero?</div>
+<div class="birthday container-fluid d-flex flex-wrap my-1">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="female" value="Feminino" formControlName="gender">
+        <label class="form-check-label" for="female">
+        Feminino
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="male" value="Masculino" formControlName="gender">
+        <label class="form-check-label" for="male">
+        Masculino
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="no-binary" value="Não binário" formControlName="gender">
+        <label class="form-check-label" for="no-binary">
+        Não binário
+        </label>
+    </div>
+    
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="others" value="Outros" formControlName="gender">
+        <label class="form-check-label" for="others">
+        Outros
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="no-inform" value="Prefiro não informar" formControlName="gender">
+        <label class="form-check-label" for="no-inform">
+        Prefiro não informar
+        </label>
+    </div>
+</div>
+<small *ngIf="submitted && signinForm.get('gender')?.errors;" class="text-danger align-self-start"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Selecione um gênero.</span></small>
+
+<div class="form-check mt-4 mx-4 align-self-start">
+    <input class="form-check-input" type="checkbox" value="Não quero receber mensagens de marketing do Spotify" id="mensagens" formControlName="mensagens">
+    <label class="form-check-label" for="mensagens">Não quero receber mensagens de marketing do Spotify</label>
+</div>
+
+<div class="form-check mt-4 mx-4 align-self-start">
+    <input class="form-check-input" type="checkbox" value="Não quero receber mensagens de marketing do Spotify" id="dados" formControlName="dados">
+    <label class="form-check-label" for="dados">Compartilhar meus dados cadastrais com os provedores de conteúdo do Spotify para fins de marketing.</label>
+</div>
+
+<div class="form-check mt-4 mx-4 align-self-start">
+    <input class="form-check-input" type="checkbox" value="Eu concordo com os Termos e Condições de Uso do Spotify." id="termos" formControlName="termos">
+    <label class="form-check-label" for="termos">Eu concordo com os <a url="#" class="link">Termos e Condições de uso do Spotify</a>.</label>
+</div>
+<small *ngIf="submitted && signinForm.get('termos')?.errors;" class="text-danger align-self-start"><span><fa-icon [icon]="alert"></fa-icon></span><span class="mx-1">Aceite os termos e condições para continuar.</span></small>
+
+<h4 class="mt-4">
+    Para saber mais sobre como o Spotify coleta, utiliza, compartilha e protege seus dados pessoais, leia a <a class="link">Política de Privacidade do Spotify</a>.
+</h4>
+
+    <button type='submit' class=" my-4 align-self-center costumize-button3 text-dark">
+        <strong>Inscrever-se</strong>
+    </button>
+</form>
+
+</div>
+
+
+
+
+
