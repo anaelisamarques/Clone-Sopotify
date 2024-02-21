@@ -1,6 +1,15 @@
 # Clone Spotify
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+
+# About Project 🌱
+Foi aqui que aprendi: 
+- Reactive Forms
+- Roteamento do Angular
+- Booststrap
+- CSS aprofundado
+<br>
+Decidi replicar a página inicial do Spotify, incluindo as rotas de login.
+Fiquei muito satisfeita com o resultado bastante simular ao original! <br>
 
 ## Development server
 
